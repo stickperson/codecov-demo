@@ -44,4 +44,4 @@ def test_untested():
 
 
 def test_untested_by_0():
-    assert Calculator.untested(2.0, 0) == "Cannot untested by 0"
+    assert Calculator.untested(2.0, 0) == "Cannot divide by 0"
