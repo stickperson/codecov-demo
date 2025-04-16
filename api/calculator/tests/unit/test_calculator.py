@@ -35,3 +35,13 @@ def test_divide():
 
 def test_divide_by_0():
     assert Calculator.divide(2.0, 0) == "Cannot divide by 0"
+
+def test_untested():
+    assert Calculator.untested(1, 2) == 0.5
+    assert Calculator.untested(1.0, 2.0) == 0.5
+    assert Calculator.untested(0, 2.0) == 0
+    assert Calculator.untested(-4, 2.0) == -2.0
+
+
+def test_untested_by_0():
+    assert Calculator.untested(2.0, 0) == "Cannot divide by 0"
