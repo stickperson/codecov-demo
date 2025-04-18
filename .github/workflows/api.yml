@@ -10,6 +10,8 @@ jobs:
       - uses: actions/checkout@v4
       - name: Fetch base
         run: git fetch origin main --depth=1000
+      - name: revparse
+        run: git rev-parse FETCH_HEAD
       - name: log
         run: git log --oneline
       - name: show head
@@ -27,6 +29,8 @@ jobs:
           fetch-depth: 0
       - name: Fetch base
         run: git fetch origin main --depth=1000
+      - name: revparse
+        run: git rev-parse FETCH_HEAD
       - name: log
         run: git log --oneline
       - name: show head
