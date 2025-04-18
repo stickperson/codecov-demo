@@ -10,6 +10,8 @@ jobs:
       - uses: actions/checkout@v4
       - name: Fetch base
         run: git fetch origin main --depth=1000
+      - name: show fetch head
+        run: git show FETCH_HEAD
       - name: diff
         run: git diff -U0 FETCH_HEAD...
   second:
@@ -21,6 +23,8 @@ jobs:
           fetch-depth: 0
       - name: Fetch base
         run: git fetch origin main --depth=1000
+      - name: show fetch head
+        run: git show FETCH_HEAD
       - name: diff
         run: git diff -U0 FETCH_HEAD...
       # - uses: actions/setup-python@v2
